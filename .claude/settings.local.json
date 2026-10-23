@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest *)",
+      "Bash(kill %1)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"console.log\\('detached' in ArrayBuffer.prototype\\)\")",
+      "Bash(node *)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3001/)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(python3 -c \"import sys,json,re; d=sys.stdin.read\\(\\); m=re.search\\(r'\\\\\"err\\\\\":\\\\{\\(.{0,400}\\)\\\\}', d\\); print\\(m.group\\(0\\) if m else d[:300]\\)\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -sv http://localhost:3000)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(grep -v \"^$\")",
+      "Bash(pkill -9 -f \"next\")",
+      "Bash(lsof -ti:3000)",
+      "Bash(kill 10853)",
+      "Bash(xargs kill)",
+      "Bash(fuser -k 3000/tcp)",
+      "Bash(echo \"PID $!\")",
+      "Bash(curl *)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git branch *)",
+      "Bash(git config *)",
+      "Bash(git commit -m ' *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('html_url'\\) or d.get\\('message',''\\)\\)\")",
+      "Bash(git remote *)",
+      "Bash(git push *)"
+    ]
+  }
+}
