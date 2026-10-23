@@ -15,6 +15,7 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://invitatii-nunta-prcvrnl9a-kron2.vercel.app"),
   title: "Invitație de nuntă",
   description: "Vă invităm cu drag la nunta noastră",
 };

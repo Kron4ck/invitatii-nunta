@@ -7,7 +7,7 @@ const path   = require("path");
 const crypto = require("crypto");
 
 // ── Configurare ──────────────────────────────────────────────────────────────
-const BASE_URL = "https://georgel-tatiana.vercel.app";
+const BASE_URL = "https://invitatii-nunta-prcvrnl9a-kron2.vercel.app";
 
 const CHARSET = "23456789abcdefghijkmnpqrstuvwxyz"; // fără 0/o și 1/l
 
@@ -21,12 +21,12 @@ function readExistingGuests() {
   try {
     const src = fs.readFileSync(GUESTS_JS, "utf8");
     const existing = {};
-    // Extrage: "cod": { salut: "X", nome: "Y", forma: "Z" }
+    // Extrage: "cod": { salut: "X", nume: "Y", forma: "Z" }
     const re =
-      /"([a-z0-9]+)":\s*\{\s*salut:\s*"([^"]*)",\s*nome:\s*"([^"]*)",\s*forma:\s*"([^"]*)"/g;
+      /"([a-z0-9]+)":\s*\{\s*salut:\s*"([^"]*)",\s*nume:\s*"([^"]*)",\s*forma:\s*"([^"]*)"/g;
     let m;
     while ((m = re.exec(src))) {
-      existing[m[1]] = { salut: m[2], nome: m[3], forma: m[4] };
+      existing[m[1]] = { salut: m[2], nume: m[3], forma: m[4] };
     }
     return existing;
   } catch {
@@ -34,7 +34,7 @@ function readExistingGuests() {
   }
 }
 
-// ── Parser CSV simplu (suportă virgule în câmpul nome) ───────────────────────
+// ── Parser CSV simplu (suportă virgule în câmpul nume) ───────────────────────
 function parseCSV(content) {
   const lines = content
     .split("\n")
@@ -46,8 +46,8 @@ function parseCSV(content) {
     const parts = line.split(",");
     const salut = parts[0].trim();
     const forma = parts[parts.length - 1].trim();
-    const nome  = parts.slice(1, -1).join(",").trim();
-    return { salut, nome, forma };
+    const nume  = parts.slice(1, -1).join(",").trim();
+    return { salut, nume, forma };
   });
 }
 
@@ -72,10 +72,10 @@ if (!fs.existsSync(CSV_IN)) {
 const rows     = parseCSV(fs.readFileSync(CSV_IN, "utf8"));
 const existing = readExistingGuests();
 
-// Map invers: "salut|nome|forma" → cod existent
+// Map invers: "salut|nume|forma" → cod existent
 const reverseMap = {};
 for (const [code, g] of Object.entries(existing)) {
-  reverseMap[`${g.salut}|${g.nome}|${g.forma}`] = code;
+  reverseMap[`${g.salut}|${g.nume}|${g.forma}`] = code;
 }
 
 const usedCodes = new Set(Object.keys(existing));
@@ -84,7 +84,7 @@ let preserved = 0;
 let created   = 0;
 
 for (const row of rows) {
-  const key  = `${row.salut}|${row.nome}|${row.forma}`;
+  const key  = `${row.salut}|${row.nume}|${row.forma}`;
   let   code = reverseMap[key];
   if (code) {
     preserved++;
@@ -98,7 +98,7 @@ for (const row of rows) {
 
 // ── Scrie guests.js ──────────────────────────────────────────────────────────
 const jsLines = Object.entries(newGuests).map(([code, g]) => {
-  return `  "${code}": { salut: "${g.salut}", nome: "${g.nome}", forma: "${g.forma}" },`;
+  return `  "${code}": { salut: "${g.salut}", nume: "${g.nume}", forma: "${g.forma}" },`;
 });
 
 fs.writeFileSync(
@@ -108,9 +108,9 @@ fs.writeFileSync(
 );
 
 // ── Scrie links.csv ──────────────────────────────────────────────────────────
-const csvLines = ['"nome","link"'];
+const csvLines = ['"nume","link"'];
 for (const [code, g] of Object.entries(newGuests)) {
-  csvLines.push(`"${g.nome}","${BASE_URL}/?i=${code}"`);
+  csvLines.push(`"${g.nume}","${BASE_URL}/?i=${code}"`);
 }
 fs.writeFileSync(LINKS_CSV, csvLines.join("\n") + "\n", "utf8");
 
@@ -120,6 +120,6 @@ console.log(`✓ data/guests.js actualizat`);
 console.log(`✓ data/links.csv generat`);
 console.log(`\nLinkuri generate:\n`);
 for (const [code, g] of Object.entries(newGuests)) {
-  console.log(`  ${g.nome.padEnd(28)} ${BASE_URL}/?i=${code}`);
+  console.log(`  ${g.nume.padEnd(28)} ${BASE_URL}/?i=${code}`);
 }
 console.log();
