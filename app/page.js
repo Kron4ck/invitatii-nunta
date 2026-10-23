@@ -1,45 +1,32 @@
-"use client";
+import { Suspense } from "react";
+import PageContent from "./PageContent";
+import { guests } from "@/data/guests";
+import { content } from "@/data/content";
 
-import { Suspense, useState } from "react";
-import { useGuest } from "@/hooks/useGuest";
-import HeroSection from "@/components/HeroSection";
-import InvitationSection from "@/components/InvitationSection";
-import CoupleSection from "@/components/CoupleSection";
-import LocationSection from "@/components/LocationSection";
-import ScheduleSection from "@/components/ScheduleSection";
-import ThankYouSection from "@/components/ThankYouSection";
-import CountdownSection from "@/components/CountdownSection";
-import Ornament from "@/components/Ornament";
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const code  = params?.i;
+  const guest = code && guests[code] ? guests[code] : null;
 
-function PageContent() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { salut, nume, forma } = useGuest();
+  const names = `${content.mire} & ${content.mireasa}`;
+  const desc  = `${names} · ${content.data}`;
 
-  return (
-    <>
-      {/* Ornamente laterale — vizibile doar pe desktop ≥1100px */}
-      <Ornament variant="sprig" className="sprig sprig--left" />
-      <Ornament variant="sprig" className="sprig sprig--right" />
+  if (!guest) {
+    return {
+      title: `Invitație la nunta ${names}`,
+      description: desc,
+      openGraph: { title: `Invitație la nunta ${names}`, description: desc },
+    };
+  }
 
-      <HeroSection salut={salut} nume={nume} onOpen={() => setIsOpen(true)} />
+  const verbInvit = guest.forma === "tu" ? "te invităm" : "vă invităm";
+  const title = `${guest.salut} ${guest.nume}, ${verbInvit} la nunta noastră`;
 
-      {isOpen && (
-        <>
-          <InvitationSection salut={salut} nume={nume} forma={forma} />
-          <Ornament variant="divider" />
-          <CoupleSection />
-          <Ornament variant="divider" />
-          <LocationSection />
-          <Ornament variant="divider" />
-          <ScheduleSection />
-          <Ornament variant="divider" />
-          <ThankYouSection forma={forma} />
-          <Ornament variant="divider" />
-          <CountdownSection />
-        </>
-      )}
-    </>
-  );
+  return {
+    title,
+    description: desc,
+    openGraph: { title, description: desc },
+  };
 }
 
 export default function Page() {

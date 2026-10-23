@@ -1,5 +1,5 @@
 export const guests = {
-  "a7k2": { salut: "Dragă",  nume: "Ion",              forma: "tu"  },
-  "b3m9": { salut: "Dragi",  nume: "Ion și Maria",     forma: "voi" },
-  "c5x1": { salut: "Dragă",  nume: "Familia Popescu",  forma: "voi" },
+  "cnqn": { salut: "Dragă", nome: "Ion", forma: "tu" },
+  "a25m": { salut: "Dragi", nome: "Ion și Maria", forma: "voi" },
+  "vix4": { salut: "Dragă", nome: "Familia Popescu", forma: "voi" },
 };
