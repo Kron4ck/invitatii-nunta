@@ -34,7 +34,7 @@ function TyDivider() {
   );
 }
 
-export default function ThankYouSection({ forma = "voi" }) {
+export default function ThankYouSection({ forma = "voi", nume = "invitați" }) {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function ThankYouSection({ forma = "voi" }) {
     return () => observer.disconnect();
   }, []);
 
-  const heading = forma === "tu" ? "Îți mulțumim!" : "Vă mulțumim!";
+  const heading = forma === "tu" ? `Îți mulțumim, ${nume}!` : `Vă mulțumim, ${nume}!`;
 
   return (
     <section className="ty" ref={sectionRef}>

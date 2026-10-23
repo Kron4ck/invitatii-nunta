@@ -32,7 +32,7 @@ export default function PageContent() {
           <Ornament variant="divider" />
           <ScheduleSection />
           <Ornament variant="divider" />
-          <ThankYouSection forma={forma} />
+          <ThankYouSection forma={forma} nume={nume} />
           <Ornament variant="divider" />
           <CountdownSection />
         </>
