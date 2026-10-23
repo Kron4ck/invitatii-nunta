@@ -32,7 +32,11 @@
       "Bash(git commit -m ' *)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('html_url'\\) or d.get\\('message',''\\)\\)\")",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(chmod 666 /mnt/c/Users/Alina/Desktop/Invitatii/data/links.csv)",
+      "Bash(python3 *)",
+      "Bash(powershell.exe -Command \"Remove-Item 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data\\\\links.csv' -Force\")",
+      "Bash(xxd /mnt/c/Users/Alina/Desktop/Invitatii/data/guests.csv)"
     ]
   }
 }
