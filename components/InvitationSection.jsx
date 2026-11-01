@@ -37,10 +37,9 @@ function WaxSeal() {
         x="40" y="43"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontSize="20"
         fill="#E8C4C0"
         fillOpacity="0.86"
-        style={{ fontFamily: "var(--font-script), cursive" }}
+        className="letter__seal-text"
       >
         {`${content.initialaMire}&${content.initialaMireasa}`}
       </text>
