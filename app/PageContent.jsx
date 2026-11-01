@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useGuest } from "@/hooks/useGuest";
+import { getGuest } from "@/hooks/useGuest";
 import HeroSection from "@/components/HeroSection";
 import InvitationSection from "@/components/InvitationSection";
 import CoupleSection from "@/components/CoupleSection";
@@ -11,9 +11,9 @@ import ThankYouSection from "@/components/ThankYouSection";
 import CountdownSection from "@/components/CountdownSection";
 import Ornament from "@/components/Ornament";
 
-export default function PageContent() {
+export default function PageContent({ code }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { salut, nume, forma } = useGuest();
+  const { salut, nume, forma } = getGuest(code);
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import PageContent from "./PageContent";
 import { guests } from "@/data/guests";
 import { content } from "@/data/content";
@@ -29,10 +28,8 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function Page() {
-  return (
-    <Suspense fallback={null}>
-      <PageContent />
-    </Suspense>
-  );
+export default async function Page({ searchParams }) {
+  const params = await searchParams;
+  const code = params?.i ?? null;
+  return <PageContent code={code} />;
 }

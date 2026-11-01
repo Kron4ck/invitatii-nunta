@@ -119,10 +119,9 @@ export default function HeroSection({ salut, nume, onOpen }) {
   const [year, month, day] = content.eventDate.split("T")[0].split("-");
   const dateShort = `${day} · ${month} · ${year}`;
 
-  const fullName = `${salut} ${nume}`;
-  const nameStyle = fullName.length > 25
+  const nameStyle = nume.length > 20
     ? { fontSize: "clamp(1.3rem, 5.5vw, 3rem)" }
-    : fullName.length > 18
+    : nume.length > 14
     ? { fontSize: "clamp(1.6rem, 6.5vw, 3.8rem)" }
     : undefined;
 
@@ -182,7 +181,7 @@ export default function HeroSection({ salut, nume, onOpen }) {
               </div>
 
               <p className="hero__label hero__anim--2">Invitație pentru</p>
-              <h1 className="hero__name hero__anim--3" style={nameStyle}>{salut} {nume}</h1>
+              <h1 className="hero__name hero__anim--3" style={nameStyle}>{nume}</h1>
 
               <div className="hero__date-wrap hero__anim--4">
                 <CoverDivider />
