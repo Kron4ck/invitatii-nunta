@@ -48,7 +48,10 @@
       "Bash(grep -oE '\\(hero__name|letter__greeting|ty__heading|Dragă|Dragi|Cristina|invitați\\)[^<]{0,60}')",
       "Bash(grep -oE '\\(hero__name|Dragi|Vasile|Elena|invitați\\)[^<]{0,60}')",
       "Bash(grep -oE '\\(hero__name|Dragi|Dragă|invitați\\)[^<]{0,60}')",
-      "Bash(grep -oE 'Dragă.{0,20}Cristina')"
+      "Bash(grep -oE 'Dragă.{0,20}Cristina')",
+      "Bash(powershell.exe -Command \"Copy-Item 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data\\\\links.csv.tmp' 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data\\\\links.csv' -Force\")",
+      "Bash(powershell.exe -Command \"robocopy 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data' 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data' links.csv.tmp /b /is /it\")",
+      "Bash(powershell.exe *)"
     ]
   }
 }
