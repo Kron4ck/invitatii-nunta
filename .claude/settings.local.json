@@ -36,7 +36,10 @@
       "Bash(chmod 666 /mnt/c/Users/Alina/Desktop/Invitatii/data/links.csv)",
       "Bash(python3 *)",
       "Bash(powershell.exe -Command \"Remove-Item 'C:\\\\Users\\\\Alina\\\\Desktop\\\\Invitatii\\\\data\\\\links.csv' -Force\")",
-      "Bash(xxd /mnt/c/Users/Alina/Desktop/Invitatii/data/guests.csv)"
+      "Bash(xxd /mnt/c/Users/Alina/Desktop/Invitatii/data/guests.csv)",
+      "Bash(awk -F',' '{print $1}')",
+      "Bash(grep -v '^$')",
+      "Bash(git *)"
     ]
   }
 }
