@@ -1,5 +1,5 @@
 export const guests = {
-  "6q47": { salut: "Dragi", nume: "Vasile & Elena", forma: "voi" },
+  "kb4w": { salut: "Dragi", nume: "Vasile & Elena", forma: "voi" },
   "5qse": { salut: "Dragi", nume: "Daniel & Valentina", forma: "voi" },
   "g93p": { salut: "Dragi", nume: "Eras & Daniela", forma: "voi" },
   "v53e": { salut: "Dragi", nume: "Gheorghe & Tamara", forma: "voi" },
@@ -8,7 +8,6 @@ export const guests = {
   "dmb5": { salut: "Dragă", nume: "Mariana", forma: "tu" },
   "ebf6": { salut: "Dragă", nume: "Vasile", forma: "tu" },
   "ukdd": { salut: "Dragi", nume: "Roberto & Olga", forma: "voi" },
-  "kb4w": { salut: "Dragi", nume: "Vasile & Elena", forma: "voi" },
   "3ws5": { salut: "Dragi", nume: "Lilian & Alina", forma: "voi" },
   "gwtn": { salut: "Dragi", nume: "Pavel & Violeta", forma: "voi" },
   "qsws": { salut: "Dragi", nume: "Vasile & Galina", forma: "voi" },
@@ -27,9 +26,8 @@ export const guests = {
   "v8jp": { salut: "Dragi", nume: "Andrei & Valentina", forma: "voi" },
   "jv7h": { salut: "Dragi", nume: "Eugen & Irina", forma: "voi" },
   "7vue": { salut: "Dragi", nume: "Anatol & Elena", forma: "voi" },
-  "m3zu": { salut: "Dragă", nume: "Maria", forma: "tu" },
-  "ub8n": { salut: "Dragi", nume: "Ion & Elena", forma: "voi" },
   "z226": { salut: "Dragă", nume: "Maria", forma: "tu" },
+  "ub8n": { salut: "Dragi", nume: "Ion & Elena", forma: "voi" },
   "taza": { salut: "Dragi", nume: "Vadim & Aliona", forma: "voi" },
   "y7ev": { salut: "Dragă", nume: "Ilie", forma: "tu" },
 };

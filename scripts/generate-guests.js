@@ -7,7 +7,7 @@ const path   = require("path");
 const crypto = require("crypto");
 
 // ── Configurare ──────────────────────────────────────────────────────────────
-const BASE_URL = "https://invitatii-nunta-prcvrnl9a-kron2.vercel.app";
+const BASE_URL = "https://invitatii-nunta-gt.vercel.app";
 
 const CHARSET = "23456789abcdefghijkmnpqrstuvwxyz"; // fără 0/o și 1/l
 
@@ -155,7 +155,16 @@ const csvLines = ['"nume","link"'];
 for (const [code, g] of Object.entries(newGuests)) {
   csvLines.push(`"${g.nume}","${BASE_URL}/?i=${code}"`);
 }
-fs.writeFileSync(LINKS_CSV, csvLines.join("\n") + "\n", "utf8");
+const LINKS_TMP = LINKS_CSV + ".tmp";
+fs.writeFileSync(LINKS_TMP, csvLines.join("\n") + "\n", "utf8");
+try {
+  fs.renameSync(LINKS_TMP, LINKS_CSV);
+} catch {
+  // fallback: copy + delete (util pe Windows/WSL când fișierul e blocat)
+  const { execSync } = require("child_process");
+  execSync(`cp "${LINKS_TMP}" "${LINKS_CSV}"`, { stdio: "ignore" });
+  fs.unlinkSync(LINKS_TMP);
+}
 
 // ── Raport final ─────────────────────────────────────────────────────────────
 console.log(`\n✓ ${rows.length} invitați procesați`);
