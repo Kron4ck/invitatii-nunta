@@ -39,7 +39,16 @@
       "Bash(xxd /mnt/c/Users/Alina/Desktop/Invitatii/data/guests.csv)",
       "Bash(awk -F',' '{print $1}')",
       "Bash(grep -v '^$')",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(grep -oE '\\(Dragi|Dragă|invitați|Cristina|hero__name\\)[^<]{0,40}')",
+      "Bash(grep -oE '\\(Dragi|Dragă|invitați|Vasile|Elena|hero__name\\)[^<]{0,50}')",
+      "Bash(grep -oE '\\(Dragi|Dragă|invitați|hero__name\\)[^<]{0,50}')",
+      "Bash(pkill -f \"next start\")",
+      "Bash(npm start *)",
+      "Bash(grep -oE '\\(hero__name|letter__greeting|ty__heading|Dragă|Dragi|Cristina|invitați\\)[^<]{0,60}')",
+      "Bash(grep -oE '\\(hero__name|Dragi|Vasile|Elena|invitați\\)[^<]{0,60}')",
+      "Bash(grep -oE '\\(hero__name|Dragi|Dragă|invitați\\)[^<]{0,60}')",
+      "Bash(grep -oE 'Dragă.{0,20}Cristina')"
     ]
   }
 }
