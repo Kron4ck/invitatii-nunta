@@ -37,9 +37,9 @@ export const content = {
 
   programul: [
     { ora: "14:00",  titlu: "Cuvântarea de nuntă", icon: "rings",     descriere: "" },
-    { ora: "[ORA]",  titlu: "Ședința foto",        icon: "camera",    descriere: "" },
-    { ora: "[ORA]",  titlu: "Banchetul",           icon: "champagne", descriere: "" },
-    { ora: "[ORA]",  titlu: "Tortul",              icon: "cake",      descriere: "" },
+    { ora: "17:00",  titlu: "Ședința foto",        icon: "camera",    descriere: "" },
+    { ora: "19:00",  titlu: "Banchetul",           icon: "champagne", descriere: "" },
+    { ora: "23:00",  titlu: "Tortul",              icon: "cake",      descriere: "" },
   ],
 
   mesajDaruri:
