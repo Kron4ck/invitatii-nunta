@@ -7,9 +7,9 @@ const ORA     = "17:00";
 const INITIALA_MIRE    = "G";      // Georgel
 const INITIALA_MIREASA = "T";      // Tatiana
 
-const LOCAL      = "[NUME LOCAL]";          // ex. "Restaurantul Eden"
+const LOCAL      = "Sala de Nunți „Mayorall”";  // ex. "Restaurantul Eden"
 const ADRESA     = "[ADRESĂ]";              // ex. "Str. Florilor 12, Cluj-Napoca"
-const MAPS       = "[LINK GOOGLE MAPS]";    // ex. "https://maps.google.com/?q=..."
+const MAPS       = "https://maps.app.goo.gl/X4UtFF5kakZJVQbV8";  // ex. "https://maps.google.com/?q=..."
 const EVENT_DATE = "2026-12-12T17:00:00";   // ISO 8601 — data și ora exactă a evenimentului
 // ─────────────────────────────────────────────────────────────────────────────
 // Programul zilei — editează ora și titlul; icon: "rings"|"camera"|"champagne"|"cake"

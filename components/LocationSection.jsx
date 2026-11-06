@@ -102,6 +102,7 @@ export default function LocationSection() {
   const sectionRef = useRef(null);
   const cardRef    = useRef(null);
   const textRef    = useRef(null);
+  const areAdresa  = !content.locatie.adresa.startsWith("[");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -136,7 +137,7 @@ export default function LocationSection() {
           <MapPin />
           <p className="loc__intro">Vă așteptăm la:</p>
           <p className="loc__local">{content.locatie.local}</p>
-          <p className="loc__adresa">{content.locatie.adresa}</p>
+          {areAdresa && <p className="loc__adresa">{content.locatie.adresa}</p>}
           <LocDivider />
           <a
             className="loc__btn"
