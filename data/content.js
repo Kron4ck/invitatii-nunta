@@ -36,10 +36,10 @@ export const content = {
   },
 
   programul: [
-    { ora: "[ORA]", titlu: "Cununia civilă", icon: "rings",     descriere: "" },
-    { ora: "[ORA]", titlu: "Ședința foto",   icon: "camera",    descriere: "" },
-    { ora: "[ORA]", titlu: "Banchetul",      icon: "champagne", descriere: "" },
-    { ora: "[ORA]", titlu: "Tortul",         icon: "cake",      descriere: "" },
+    { ora: "14:00",  titlu: "Cuvântarea de nuntă", icon: "rings",     descriere: "" },
+    { ora: "[ORA]",  titlu: "Ședința foto",        icon: "camera",    descriere: "" },
+    { ora: "[ORA]",  titlu: "Banchetul",           icon: "champagne", descriere: "" },
+    { ora: "[ORA]",  titlu: "Tortul",              icon: "cake",      descriere: "" },
   ],
 
   mesajDaruri:
