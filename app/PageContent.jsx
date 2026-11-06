@@ -4,7 +4,6 @@ import { useState } from "react";
 import { getGuest } from "@/hooks/useGuest";
 import HeroSection from "@/components/HeroSection";
 import InvitationSection from "@/components/InvitationSection";
-import CoupleSection from "@/components/CoupleSection";
 import LocationSection from "@/components/LocationSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ThankYouSection from "@/components/ThankYouSection";
@@ -25,8 +24,6 @@ export default function PageContent({ code }) {
       {isOpen && (
         <>
           <InvitationSection salut={salut} nume={nume} forma={forma} />
-          <Ornament variant="divider" />
-          <CoupleSection />
           <Ornament variant="divider" />
           <LocationSection />
           <Ornament variant="divider" />

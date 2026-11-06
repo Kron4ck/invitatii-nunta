@@ -29,8 +29,6 @@ export const content = {
 
   semnatura: `Cu drag, ${MIRE} & ${MIREASA}`,
 
-  citat: "Pășim împreună spre un nou început...",
-
   locatie: {
     local:  LOCAL,
     adresa: ADRESA,
