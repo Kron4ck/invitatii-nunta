@@ -31,4 +31,10 @@ export const guests = {
   "taza": { salut: "Dragi", nume: "Vadim & Aliona", forma: "voi" },
   "y7ev": { salut: "Dragă", nume: "Ilie", forma: "tu" },
   "ausw": { salut: "Dragi", nume: "Liliana & Ion", forma: "voi" },
+  "xemf": { salut: "Dragă", nume: "Olivia", forma: "tu" },
+  "qbup": { salut: "Dragi", nume: "Vasyle & Lenuța", forma: "voi" },
+  "kf4m": { salut: "Dragi", nume: "Veronica & Sergiu", forma: "voi" },
+  "cas8": { salut: "Dragi", nume: "Gioele & Morena", forma: "voi" },
+  "dvky": { salut: "Dragi", nume: "Gheorghe & Ana", forma: "voi" },
+  "2eji": { salut: "Dragi", nume: "Ana & Ion", forma: "voi" },
 };
